@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="../dist/face-api.js"></script>
+    <script src="./dist/face-api.js"></script>
     <script src="public/commons.js"></script>
     <link rel="stylesheet" href="public/styles.css" />
     <link
@@ -33,7 +33,7 @@
         <canvas id="canvas" />
       </div>
       <audio id="audio" controls>
-        <source src="./best-motivating-naruto-shippuden.mp3" type="audio/mp3" />
+        <source src="best-motivating-naruto-shippuden.mp3" type="audio/mp3" />
         <p>Your browser does not support HTML5 audio :(</p>
       </audio>
       <h5>Increase Input Size to get higher accuracy</h5>
@@ -221,10 +221,6 @@
         }
 
         updateTimeStats(Date.now() - ts);
-
-        //            faceapi.drawDetection('overlay', result.map(det => det.forSize(width, height)), {
-        //                withScore: false
-        //            })
         setTimeout(() => onPlay(videoEl));
         var status = document.getElementById("status");
         status.innerHTML = "Running the model ... ";
